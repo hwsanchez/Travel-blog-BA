@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require('cors');
 const app = express();
 
+app.use(cors());
 
 function startServerApp(port) {
   return app.listen(port, () => {
@@ -9,7 +10,6 @@ function startServerApp(port) {
   });
 }
 
-app.use(cors());
 
 exports.app = app;
 exports.startServerApp = startServerApp;
